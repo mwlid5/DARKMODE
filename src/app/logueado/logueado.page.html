@@ -3,7 +3,8 @@
 <ion-content>
 
   <div style="margin: 2em; margin-top: 4em;">
-    <ion-img style="width: 10rem; float: left;" src="../../assets/images/iv_main_logo.png"></ion-img><a style="float: right;" (click)="irajustes()"><i class="fa fa-gear" style="font-size:30px;color:rgb(28, 130, 189);"></i></a>
+    <ion-img *ngIf="oscuro=='no'" style="width: 10rem; float: left;" src="../../assets/images/iv_main_logo.png"></ion-img><ion-img *ngIf="oscuro=='si'" style="width: 11.3rem; float: left;" src="../../assets/images/login_logo.png"></ion-img><a style="float: right;" (click)="irajustes()"><i class="fa fa-gear" style="font-size:30px;color:rgb(28, 130, 189);"></i></a>
+    
   </div>
 
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" style="margin-top: 3em;">

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detalleset',
@@ -8,14 +8,18 @@ import { Router } from '@angular/router';
 })
 export class DetallesetPage implements OnInit {
 
-  constructor(private ruter:Router) { }
-  
+  constructor(private ruter:Router, private router:ActivatedRoute) { }
+
+  oscuro:string="no";
+
   ngOnInit() {
-    
+    this.oscuro = this.router.snapshot.paramMap.get('oscuro');
   }
 
+  
+  
   irescr(){
-    this.ruter.navigate(['logueado']);
+    this.ruter.navigate(["logueado/" + this.oscuro]);
   }
 
 

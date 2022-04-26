@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -9,14 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LogueadoPage implements OnInit {
 
-  constructor(private ruter:Router) { }
+  oscuro:string="no";  
+
+  constructor(private ruter:Router, private router:ActivatedRoute) { }
 
   ngOnInit() {
-  }
 
+    this.oscuro = this.router.snapshot.paramMap.get('oscuro');
+
+    }
 
   irajustes(){
-    this.ruter.navigate(['ajustes']);
+    this.ruter.navigate(['ajustes/' + this.oscuro]);
   }
  
   doRefresh(event) {
@@ -29,31 +33,33 @@ export class LogueadoPage implements OnInit {
   }
 
   irvinc(){
-    this.ruter.navigate(['invertida']);
+    this.ruter.navigate(['invertida/' + this.oscuro]);
   }
 
   irmult(){
-    this.ruter.navigate(['multiarticulo']);
+    this.ruter.navigate(['multiarticulo/' + this.oscuro]);
   }
 
   irdeta(){
-    this.ruter.navigate(['detalleset']);
+    this.ruter.navigate(['detalleset/' + this.oscuro]);
   }
 
   irdesv(){
-    this.ruter.navigate(['desvincular']);
+    this.ruter.navigate(['desvincular/' + this.oscuro]);
   }
 
   irarti(){
-    this.ruter.navigate(['articulosord']);
+    this.ruter.navigate(['articulosord/' + this.oscuro]);
   }
 
   irinve(){
-    this.ruter.navigate(['invertida']);
+    this.ruter.navigate(['invertida/' + this.oscuro]);
   }
 
   irhome(){
     this.ruter.navigate(['']);
   }
+
+  
 
 }

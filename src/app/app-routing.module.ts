@@ -12,39 +12,39 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'logueado',
+    path: 'logueado/:oscuro',
     loadChildren: () => import('./logueado/logueado.module').then( m => m.LogueadoPageModule)
   },
   {
-    path: 'ajustes',
+    path: 'ajustes/:oscuro',
     loadChildren: () => import('./ajustes/ajustes.module').then( m => m.AjustesPageModule)
   },
   {
-    path: 'vincular',
+    path: 'vincular/:oscuro',
     loadChildren: () => import('./vincular/vincular.module').then( m => m.VincularPageModule)
   },
   {
-    path: 'multiarticulo',
+    path: 'multiarticulo/:oscuro',
     loadChildren: () => import('./multiarticulo/multiarticulo.module').then( m => m.MultiarticuloPageModule)
   },
   {
-    path: 'detalleset',
+    path: 'detalleset/:oscuro',
     loadChildren: () => import('./detalleset/detalleset.module').then( m => m.DetallesetPageModule)
   },
   {
-    path: 'desvincular',
+    path: 'desvincular/:oscuro',
     loadChildren: () => import('./desvincular/desvincular.module').then( m => m.DesvincularPageModule)
   },
   {
-    path: 'articulosord',
+    path: 'articulosord/:oscuro',
     loadChildren: () => import('./articulosord/articulosord.module').then( m => m.ArticulosordPageModule)
   },
   {
-    path: 'invertida',
+    path: 'invertida/:oscuro',
     loadChildren: () => import('./invertida/invertida.module').then( m => m.InvertidaPageModule)
   },
   {
-    path: '**',
+    path: '**/:oscuro',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
   }
 ];

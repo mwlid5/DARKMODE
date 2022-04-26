@@ -14,8 +14,10 @@ export class HomePage {
    
   }
 
+  dark:string="no";
+
   irlog(){
-    this.ruter.navigate(['logueado']);
+    this.ruter.navigate(["logueado/" + this.dark]);
   }
 
   showPassword = false;
@@ -32,7 +34,7 @@ export class HomePage {
       return this.showPassword2 ? 'text' : 'password';
   }
   
-dark:string="no";
+
 
   toggleShow2() {
     if (this.dark == "no"){
