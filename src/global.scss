@@ -51,6 +51,10 @@
     color: #647B9D;
     font-weight: bold;
   }
+
+  .slt:focus{
+    border: none;
+  }
   
 //Atras
 
@@ -59,7 +63,7 @@
 }
 
 #atrasbtn{
-  font-size: 26px; float: left; color: white; outline:none;
+  font-size: 26px; color: white;
 }
 
 #atrastxt{
