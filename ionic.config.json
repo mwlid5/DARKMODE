@@ -1,0 +1,7 @@
+{
+  "name": "ETE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

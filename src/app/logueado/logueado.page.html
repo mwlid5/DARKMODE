@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<ion-content>
+
+  <div style="margin: 2em; margin-top: 4em;">
+    <ion-img style="width: 10rem; float: left;" src="../../assets/images/iv_main_logo.png"></ion-img><a style="float: right;" (click)="irajustes()"><i class="fa fa-gear" style="font-size:30px;color:rgb(28, 130, 189);"></i></a>
+  </div>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" style="margin-top: 3em;">
+    <ion-refresher-content
+      refreshingText="Actualizando...">
+    </ion-refresher-content>
+  </ion-refresher>
+<br>
+  <div class="cent">
+    <select name="slt" class="slt">
+      <option value="AEME GROUP S1">AEME GROUP S1</option>
+      <option value="GROUP S2">GROUP SS2</option>
+    </select>
+  </div>
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col offset-4 size="6">
+        <div>
+          <a (click)="irvinc()"><ion-card>
+             <ion-img src="../../assets/images/header5.png"></ion-img>
+          </ion-card>
+         </a>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div>
+          <a (click)="irmult()"><ion-card>
+            <ion-img src="../../assets/images/header5.png"></ion-img>
+          </ion-card>
+         </a>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <div>
+          <a (click)="irdeta()"><ion-card>
+            <ion-img src="../../assets/images/header5.png"></ion-img>
+          </ion-card>
+         </a>
+        </div>
+      </ion-col>
+      <ion-col offset-4 size="6">
+        <div>
+          <a (click)="irdesv()"><ion-card>
+            <ion-img src="../../assets/images/header5.png"></ion-img>
+          </ion-card>
+         </a>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset-4 size="6">
+        <div>
+          <a (click)="irarti()"><ion-card>
+            <ion-img src="../../assets/images/header5.png"></ion-img>
+          </ion-card>
+         </a>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div>
+          <a (click)="irinve()"><ion-card>
+            <ion-img src="../../assets/images/header5.png"></ion-img>
+          </ion-card>
+         </a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
+</ion-content>

@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<ion-content [fullscreen]="true">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-grid > 
+        <ion-row>
+          <ion-col size="1.8">
+            <a class="type-toggle" (click)="toggleShow2()">
+              <ion-img src="../../assets/images/modo-oscuro.png" style="margin-left: 0.5em;"></ion-img>
+            </a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9.5">
+            <div>
+              <ion-img src="../../assets/images/login_logo.png" class="logimg"></ion-img>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+    <div id="container">
+      
+    <ion-card class="ion-no-margin"> 
+
+      <ion-img  src="../../assets/images/header5.png"></ion-img>
+
+    </ion-card>
+
+    <div class="cent">
+      <select name="idioma" class="slt">
+        <option value="Español">Español</option>
+        <option value="English">English</option>
+      </select>
+    </div>
+    
+    <ion-card-content>
+      <div class="wrap">
+        <ion-item class="int">
+          <ion-icon name="person-outline" class="iconform"></ion-icon>
+          <ion-input class="intxt" type="text" name="user" class="iconform" placeholder="Usuario" required></ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="int">
+          
+            <ion-icon name="lock-closed-outline" class="iconform"></ion-icon>
+            <ion-input  [type]="getType()" class="intxt" type="password" name="pass" id="password" placeholder="Contraseña" required></ion-input>
+
+            <a class="type-toggle" (click)="toggleShow()">
+              <ion-icon class="show-option" [hidden]="showPassword" name="eye-off-outline"></ion-icon>
+              <ion-icon class="hide-option" [hidden]="!showPassword" name="eye-outline"></ion-icon>
+            </a>
+        
+        </ion-item>
+        <br><br><br> 
+        <div style="text-align: center;">        
+          <ion-checkbox style="height: 1.4em;width: 1.4em; margin-right: 1em;" color="secondary" slot="start"></ion-checkbox>
+          <ion-label style="font-size: 17px; color: #647B9D;">Recordar</ion-label>
+        </div>
+      </div>
+      
+      <div class="log">
+        <ion-button style="--background:#46acf9" shape="round" fill="solid" class="logbtn" (click)="irlog()">INICIAR SESIÓN</ion-button>
+      </div>
+      
+      <!--<div class="sbtns">
+        <ion-button fill="clear" class="fb ion-no-padding"> <ion-img src="../../assets/images/facebook.png"></ion-img></ion-button>
+        <ion-button fill="clear" class="goo ion-no-padding"> <ion-img src="../../assets/images/google.png"></ion-img></ion-button>
+      </div>
+    -->
+
+  </ion-card-content>
+</div>
+</ion-content>

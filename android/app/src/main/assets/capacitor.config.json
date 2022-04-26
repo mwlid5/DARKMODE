@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ETE",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
